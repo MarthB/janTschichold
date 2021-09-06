@@ -1,0 +1,945 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    list-style-type: none;
+    color: inherit;
+    text-decoration: none;
+    border: none;
+    /* outline: 1px solid red; */
+    box-sizing: border-box;
+
+}
+
+/* fonts ---------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* TTNorms -------------------------------------------------------------------------------------------------------------------------------------------*/
+@font-face {
+    font-family: 'tt_norms_probold_italic';
+    src: url('../fonts/TTNorms/tt_norms_pro_bold_italic-webfont.woff2') format('woff2'),
+         url('../fonts/TTNorms/tt_norms_pro_bold_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'tt_norms_probold';
+    src: url('../fonts/TTNorms/tt_norms_pro_bold-webfont.woff2') format('woff2'),
+         url('../fonts/TTNorms/tt_norms_pro_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'tt_norms_proitalic';
+    src: url('../fonts/TTNorms/tt_norms_pro_italic-webfont.woff2') format('woff2'),
+         url('../fonts/TTNorms/tt_norms_pro_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'tt_norms_promedium_italic';
+    src: url('../fonts/TTNorms/tt_norms_pro_medium_italic-webfont.woff2') format('woff2'),
+         url('../fonts/TTNorms/tt_norms_pro_medium_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'tt_norms_promedium';
+    src: url('../fonts/TTNorms/tt_norms_pro_medium-webfont.woff2') format('woff2'),
+         url('../fonts/TTNorms/tt_norms_pro_medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'tt_norms_proregular';
+    src: url('../fonts/TTNorms/tt_norms_pro_regular-webfont.woff2') format('woff2'),
+         url('../fonts/TTNorms/tt_norms_pro_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Sabon --------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/* IBM Plex -----------------------------------------------------------------------------------------------------------------------------------------*/
+@font-face {
+  font-family: 'ibm_plex_sansbold';
+  src: url('../fonts/IBMPlex/ibmplexsans-bold-webfont.woff2') format('woff2'),
+       url('../fonts/IBMPlex/ibmplexsans-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'ibm_plex_sansbold_italic';
+  src: url('../fonts/IBMPlex/ibmplexsans-bolditalic-webfont.woff2') format('woff2'),
+       url('../fonts/IBMPlex/ibmplexsans-bolditalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+/* Open Sans ---------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+@font-face {
+  font-family: 'open_sansbold';
+  src: url('../fonts/Open Sans/opensans-bold-webfont.woff2') format('woff2'),
+       url('../fonts/Open Sans/opensans-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'open_sansbold_italic';
+  src: url('../fonts/Open Sans/opensans-bolditalic-webfont.woff2') format('woff2'),
+       url('../fonts/Open Sans/opensans-bolditalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'open_sansextrabold';
+  src: url('../fonts/Open Sans/opensans-extrabold-webfont.woff2') format('woff2'),
+       url('../fonts/Open Sans/opensans-extrabold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'open_sansextrabold_italic';
+  src: url('../fonts/Open Sans/opensans-extrabolditalic-webfont.woff2') format('woff2'),
+       url('../fonts/Open Sans/opensans-extrabolditalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'open_sansitalic';
+  src: url('../fonts/Open Sans/opensans-italic-webfont.woff2') format('woff2'),
+       url('../fonts/Open Sans/opensans-italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'open_sansregular';
+  src: url('../fonts/Open Sans/opensans-regular-webfont.woff2') format('woff2'),
+       url('../fonts/Open Sans/opensans-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+/* Start of styling -------------------------------------------------------------------------------------------------------*/
+
+body{
+  overflow-x: hidden;
+  font-family: 'open_sansregular', sans-serif;
+
+}
+ p{
+  /* font-family: 'open_sansregular'; */
+  max-width: 62ch;
+  min-width: 30ch;
+} 
+
+/* Navigation------------------------------------------------------------------------------------------------------------- */
+
+.mainNav {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    position: fixed;
+    left: -412px;
+    z-index: 50;
+  }
+  .mainNav.open{
+    z-index: 150;
+    animation-name: openNavigation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  .mainNav.close{
+    animation-name: closeNavigation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes openNavigation {
+    0% {
+        left: -412px;
+    }
+    100% {
+        left: 0px;
+    }
+
+  }
+  @keyframes closeNavigation {
+    0% {
+      left: 0px;
+      z-index: 150;
+    }
+    100% {
+        left: -412px;
+        z-index: 50;
+    }
+
+  }
+  .navHeadingContainer{
+    width: 50px;
+    background-color: none;
+    
+  }
+  .navHeading{
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 200px;
+    right: -175px;
+    width: 400px;
+    font-family: 'tt_norms_probold', sans-serif;
+    font-size: 44px;
+    line-height: 101.3%;
+
+  }
+  .hamburgerMenu{
+      width: 2vw;
+      height: 100vh;
+      background-color: #F50C0C;
+  }
+  .menuIcon{
+      margin: 5px;
+      fill: #fff;
+  }
+  .pageLinks{
+    margin-top: 30%;
+  }
+  .mainNav a {
+    display: block;
+    color: black;
+    text-align: right;
+    padding: 1em;
+    text-decoration: none;
+    font-family: ibm_plex_sansbold;
+    font-size: 1.5em;
+    line-height: 101.3%;
+/* or 36px */
+  }
+   
+ a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  
+  .mainNav a:hover:not(.active) {
+    color: #F50C0C;
+  }
+  
+ 
+  .mainContent{
+    width: 100vw;
+    height: 100vh;
+
+  }
+
+
+
+/* About Page------------------------------------------------------------------------ */
+
+  .aboutContent{
+    height: 200vh;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 30vh 80vh auto auto;
+    grid-template-areas: 
+      ". . head head head head head"
+      ". . . mainpoint mainpoint mainpoint mainpoint"
+      ". content content content content content ."
+      ". quote quote quote quote quote .";
+  }
+  .headerContainer{
+    grid-area: head;
+    height: 100px;
+    background-color: #F50C0C;
+    color: white;
+    
+    margin-top: 3%;
+    padding-left: 3%;
+  }
+  .pageHeadingAbout{
+    font-family: 'ibm_plex_sansbold', sans-serif;
+    font-size: 9.375rem;
+    position: relative;
+    bottom: 75%;
+  }
+
+  .mainPoint{
+    grid-area: mainpoint;
+    margin-right: 10%;
+    font-family: 'tt_norms_probold', sans-serif;
+    font-size: 1.6rem;
+  }
+  .redOutline{
+    min-width: 20ch;
+    height: 50%;
+    padding: 8%;
+    margin-left: 20%;
+    border: #F50C0C 12px solid;
+  }
+
+  .aboutPghs{
+    grid-area: content;
+    margin-right: 20px;
+    font-size: 0.875em;
+    line-height: 1.5em;
+    margin-top: 5%;
+    /* margin-top: 6.5%; */
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+      "p1 p2";
+    position: relative;
+    left: -4vw;
+    grid-column-gap: 2%;
+    line-height: 2em;
+  }
+  .aboutPghs p{
+    margin-bottom: 1em;
+
+  }
+  .aboutP1{
+    grid-area: p1;
+  }
+  .aboutP2{
+    grid-area: p2;
+  }
+  
+
+ .aboutQuote{
+   grid-area: quote;
+   position: relative;
+    left: -4vw;
+    margin-right: 20px;
+    font-size: 1.2rem;
+    font-family: 'open_sansextrabold', sans-serif;
+  
+
+ }
+
+ .greyText{
+    color: #8D8D8D;
+   
+}
+ .janPhotoContainer{
+  position: absolute;
+  left: 10%;
+  height: 120vh;
+  width: 72%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+      "image"
+      "separator";
+  bottom: -25%;
+ }
+
+
+  .janPhoto{
+    
+    grid-area: image;
+    /* height: 90vh; */
+    width: 100%;
+    z-index: 100;
+    top: 5%;
+    /* left: 5%; */
+  }
+  .blkSeparator{
+    background-color: #000;
+    height: 15%;
+    width: 100%;
+    top: 97vh;
+    margin-top: 3%;
+  }
+
+.openItalics{
+  font-family: 'open_sansitalic';
+}
+
+   /* The New Typography Page----------------------------------------------------------------------- */
+  .tntMainContent{
+
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 7vh 23vh 3fr;
+    grid-template-areas:
+      ". . . . . . ."
+        ". head head head head head2 head2"
+        ". p p p p head3 head3";
+  }
+
+  .tntHeading{
+    font-size: 6rem;
+    font-family: 'ibm_plex_sansbold';
+  }
+  .headingPt1{
+    grid-area: head;
+    text-align: right;
+  }
+  
+  .pghContainerTNT{
+    grid-area: p;
+    border-top: #000 solid 7px;
+    border-bottom: #000 solid 7px;
+    padding: 2%;
+    margin-right: 2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "p1 p2";
+    grid-column-gap: 30px;
+    line-height: 1.4em; 
+    margin-bottom: 5%;
+  }
+  .tntP1{
+    grid-area: p1;
+    /* width: 50ch; */
+  }
+  .tntP2{
+    grid-area: p2;
+    /* width: 39ch; */
+  }
+
+  .headingPt2{
+    grid-area: head2;
+    color: #fff;
+    background-color: #F50C0C;
+  }
+  .headingPt3{
+    grid-area: head3;
+    position: relative;
+    bottom: 5%;
+  }
+
+  /* Influence Page------------------------------------------------------------------------ */
+  .inflmainContent{
+    height: 150vh;
+    overflow-y: hidden;
+    overflow: hidden;
+  }
+  .influenceContent{
+    height: 150vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 160px 3fr;
+    grid-template-areas:
+        ". . head head head head head head head ."
+        ". . redBlock redBlock redBlock redBlock content content content .";
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    position: relative;
+    transform: rotate(-10deg);
+    top: 6%;
+    right: 5%;
+    
+  }
+.influenceHead{
+    grid-area: head;
+    border: #F50C0C 3px solid;
+    font-size: 7.5em;
+    letter-spacing: 2.1rem;
+    font-family: 'ibm_plex_sansbold', sans-serif;
+    margin-top: 5%;
+    padding-bottom: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+.redBlock{
+  grid-area: redBlock;
+  background-color: #F50C0C;
+}
+.inflluenceText{
+  grid-area: content;
+}
+.bold{
+  font-family: 'open_sansbold', sans-serif;
+}
+.dropcap{
+  float: left;
+  line-height: 79%;
+  width: .7em;
+  font-size: 520%;
+}
+ /* Sabon Page----------------------------------------------------------------------- */
+ .sabonMainContent{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+      ". left left left right right right";
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  font-family: 'Sabon Next LT W05 Regular', 'Times New Roman', serif;
+  
+ }
+ .leftColumn{
+  grid-area: left;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2% 18% 1fr 1fr;
+  grid-template-areas:
+      "pImage"
+      "redBar"
+      "heading"
+      "p"
+      "redbox";
+  grid-column-gap: 10px;
+  grid-row-gap: 30px;
+  margin-top: 10%;
+ }
+ .pBowl{
+   grid-area: pImage;
+   width: 50%;
+   border-radius: 50%;
+   display: flex;
+   justify-self: center;
+ }
+ .redDivider{
+  grid-area: redBar;
+  background-color: #F50C0C;
+  width: 99%;
+ }
+ .sabonMainContent h1{
+  grid-area: heading;
+   font-size: 10rem;
+   font-family: 'Sabon Next LT W05 Bold', 'Times New Roman', serif;
+   letter-spacing: 0.6rem;
+   position: relative;
+   bottom: 15%;
+   display: flex;
+   justify-self: center;
+ }
+ .sabonHist{
+  grid-area: p;
+  line-height: 1.6em;
+   width: 60ch;
+ }
+ .redBoxSabon{
+    grid-area: redbox;
+    background-color: #F50C0C;
+ }
+ .rightColumn{
+  grid-area: right;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 38% 2% 1fr;
+  grid-template-areas:
+      "p"
+      "bracketImg"
+      "redBar"
+      "emphImg";
+  grid-column-gap: 10px;
+  grid-row-gap: 30px;
+  margin-top: 25%;
+ }
+ .sabonClassFormat{
+  grid-area: p;
+  display: grid;
+  grid-template-columns: 1fr 15fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+      "redBar"
+      "p";
+  grid-column-gap: 10px;
+  
+ }
+ .sabonClassification{
+   width: 50ch;
+ }
+ .sabonBracketsImg{
+  grid-area: bracketImg;
+    width: 45%;
+    display: flex;
+    justify-self: center;
+    align-self: flex-end;
+    border: red 30px solid;
+    border-radius: 50%;
+    margin-bottom: 16%;
+ }
+ .rdRc{
+  grid-area: redBar;
+ }
+
+ .sabonEmph{
+
+  grid-area: emphImg;
+  border: red 5px solid;
+  border-radius: 50%;
+  /* width: 75%;
+  height: 68%; */
+  /* margin-top: 16%; */
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  width: 60%;
+  padding: 10%;
+  margin-bottom: 5%;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+ /* Elementaire Typographie Page------------------------------------------------------------------------ */
+  .etmainContent{
+    height: 190vh;
+    overflow-y: hidden;
+    overflow: hidden;
+  }
+ .etContent{
+  height: 160vh;
+  display: grid;
+  grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 5%  10% 2fr;
+  grid-template-areas:
+      ". . head head head head head head"
+      ". . linkTitle linkTitle linkTitle linkTitle linkTitle linkTitle"
+      ". . links links links links links links"
+      ". . p p p p p p";
+  grid-column-gap: 10px;
+  grid-row-gap: 30px;
+  transform: rotate(-10deg);
+  position: relative;
+  left: -3%;
+
+}
+.etheading{
+  grid-area: head;
+  font-family: 'ibm_plex_sansbold', sans-serif;
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "main sub";
+  grid-column-gap: 30px;
+  grid-row-gap: 10px;
+  margin-top: 3%;
+  align-self: flex-end;
+}
+
+.etMHeading{
+  grid-area: main;
+  font-size: 6em;
+  line-height: 1em;
+}
+.etSubheading{
+  grid-area: sub;
+  font-size: 1.5em;
+  align-self: flex-end;
+}
+
+
+.linksHeading{
+  grid-area: linkTitle;
+  height: 1em;
+  width: 100vw;
+  font-size: 4.5em;
+  font-family: 'open_sansextrabold';
+  color: #fff;
+  background-color: #F50C0C;
+  
+}
+.linksHeading h2{
+  position: relative;
+  right: 0.3%;
+  font-size: 0.6em;
+  top: 2%;
+  align-self: center;
+
+}
+
+.links{
+  grid-area: links;
+}
+.links a{
+  text-decoration: underline;
+}
+
+
+.etText{
+  grid-area: p;
+  /* padding: 40px; */
+  height: 100%;
+  
+  border-left: 5vw solid #F50C0C;
+}
+
+
+.etPghs{
+  grid-area: left;
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  "left right";
+  grid-column-gap: 40px;
+  grid-row-gap: 10px;
+  padding-right: 3%;
+  padding-left: 2%;
+  line-height: 1.8em;
+}
+.etp1{
+  grid-area: left;
+  width: 50ch;
+  
+}
+.etp2{
+  grid-area: right;
+  width: 49ch;
+}
+
+ /* References Page----------------------------------------------------------------------- */
+
+ .refContent{
+  height: 170vh;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 30px 3fr 1fr 30px 3fr;
+  grid-template-areas: 
+  ". head"
+  ". redbar"
+  ". references"
+  ". head2"
+  ". redbar2"
+  ". references2";
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  
+}
+
+.refTitle,
+.references,
+.refUnderline,
+.redBar,
+.imgRefTitle,
+.photoCredUnderline,
+.imgRef{
+  margin-right: 30px;
+}
+
+.refTitle{
+  grid-area: head;
+  font-family: 'ibm_plex_sansbold', sans-serif;
+  font-size: 4em;
+  align-self: flex-end;
+  margin-top: 3%;
+  
+}
+.references{
+  grid-area: references;
+  max-width: 80ch;
+}
+.references p{
+  max-width: 100ch;
+}
+.refUnderline{
+  grid-area: redbar;
+}
+.redBar{
+  background-color: #F50C0C;
+}
+.imgRefTitle{
+  grid-area: head2;
+  font-family: 'ibm_plex_sansbold', sans-serif;
+  font-size: 4em;
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+.photoCredUnderline{
+  grid-area: redbar2;
+}
+.imgRef{
+  grid-area: references2;
+  margin-bottom: 5%;
+}
+
+.boldOpenItalics{
+  font-family: 'open_sansbold_italic';
+}
+.inlineLink{
+  text-decoration: underline;
+}
+/*this piece of code is from:  https://www.thesitewizard.com/css/hanging-indents.shtml */
+.hangingindent {
+  padding-left: 22px ;
+  text-indent: -22px ;
+}
+/*end of code from:  https://www.thesitewizard.com/css/hanging-indents.shtml */
+
+
+@media only screen and (max-width: 1218px) {
+  .aboutPghs{
+
+    margin-top: 0%;
+
+  }
+  .aboutContent{
+    height: 250vh;
+    overflow: hidden;
+    
+  }
+
+  .redOutline{
+    font-size: 1.3rem;
+  }
+  
+
+  .influenceHead{
+
+    font-size: 4.5em;
+
+    margin-top: 5%;
+    padding-left: 1.5%;
+
+    
+}
+
+
+
+}
+
+/* 
+@media only screen and (max-width: 748px) {
+  .tntHeading{
+    font-size: 4rem;
+  }
+  
+  
+}
+*/
+@media only screen and (min-width: 1847px) {
+
+  .aboutPghs{
+
+    margin-top: 10%;
+
+  }
+  /* .mainPoint{
+    font-size: 2rem;
+  } */
+  .redOutline{
+    font-size: 2rem;
+    height: auto;
+  }
+
+ /* Influence Page------------------------------------------------------------------------ */
+
+ .influenceContent {
+  grid-template-rows: 190px 3fr;
+ }
+
+  .influenceHead{
+
+    border: #F50C0C 4px solid;
+    font-size: 6em;
+    letter-spacing: 4.5rem;
+    margin-top: 5%;
+    padding-left: 1.5%;
+
+    
+}
+
+
+   /* Elementaire Typographie Page------------------------------------------------------------------------ */
+
+ .etContent{
+
+  left: 2%;
+
+}
+
+/* Sabon Page------------------------------------------------------------------------ */
+
+.sabonMainContent h1{
+
+   font-size: 12rem;
+   letter-spacing: 0.6rem;
+
+ }
+ .sabonHist{
+  font-size: 1.2em;
+  line-height: 1.6em;
+   width: 60ch;
+ }
+ .sabonClassification{
+  font-size: 1.2em;
+   width: 50ch;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
